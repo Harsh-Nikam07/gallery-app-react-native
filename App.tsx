@@ -1,12 +1,34 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet } from 'react-native';
+import { AppNavigator } from './src/navigation/AppNavigator';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import { ApiProvider, ThemeProvider, FavoritesProvider } from './src/context';
+import { useTheme } from './src/context/ThemeContext';
+import React from 'react';
+import { LogBox } from 'react-native';
+
+const AppContent = () => {
+  const { isDark } = useTheme();
+  return (
+    <>
+      <StatusBar style={isDark ? 'light' : 'dark'} />
+      <AppNavigator />
+    </>
+  );
+};
 
 export default function App() {
+  // LogBox.ignoreAllLogs();
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <ApiProvider>
+        <ThemeProvider>
+          <FavoritesProvider>
+            <AppContent />
+          </FavoritesProvider>
+        </ThemeProvider>
+      </ApiProvider>
+    </GestureHandlerRootView>
   );
 }
 
