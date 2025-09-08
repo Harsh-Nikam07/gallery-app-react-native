@@ -2,7 +2,11 @@
 
 A modern, performant React Native gallery application built with Expo, featuring infinite scroll, dark/light themes, favorites, and offline support.
 
-![Gallery App Demo](https://via.placeholder.com/800x400/1a1a1a/ffffff?text=Gallery+App+Demo)
+<img width="1179" height="847" alt="Frame 1 (1)" src="https://github.com/user-attachments/assets/b7576031-20d7-48e9-8cad-e803625087d7" />
+
+<img width="1179" height="847" alt="Frame 3" src="https://github.com/user-attachments/assets/68e12dab-34ed-4430-8c82-adb9bc21a739" />
+
+
 
 ## ✨ Features
 
