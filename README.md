@@ -155,9 +155,6 @@ Create a `.env` file in the root directory (copy from `.env.example`):
 | Variable | Description | Required | Default |
 |----------|-------------|----------|---------|
 | `EXPO_PUBLIC_API_BASE_URL` | Base URL for the gallery API | ✅ Yes | - |
-| `EXPO_PUBLIC_API_KEY` | API key for authentication | ❌ No | - |
-| `EXPO_PUBLIC_DEBUG_MODE` | Enable debug logging | ❌ No | `false` |
-| `EXPO_PUBLIC_IMAGE_CACHE_SIZE` | Max cached images | ❌ No | `100` |
 
 ## 🛠️ Tech Stack
 
