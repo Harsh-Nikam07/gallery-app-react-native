@@ -11,10 +11,13 @@ import {
 } from 'react-native';
 import { useTheme } from '../context/ThemeContext';
 import { useFavorites } from '../context/FavoritesContext';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icon2 from 'react-native-vector-icons/Entypo';
+// import Icon from 'react-native-vector-icons/FontAwesome';
+// import Icon2 from 'react-native-vector-icons/Entypo';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Image } from 'expo-image';
+
+import { FontAwesome as Icon, Entypo as Icon2 } from '@expo/vector-icons';
+
 
 export const SettingsScreen: React.FC = () => {
   const { theme, isDark, themeMode, setThemeMode } = useTheme();
@@ -156,7 +159,7 @@ export const SettingsScreen: React.FC = () => {
     >
       <View style={styles.themeOptionLeft} >
         <View style={[styles.iconContainer, { backgroundColor: theme.border }]}>
-          <Icon name={icon} size={20} color={theme.text} />
+          <Icon name={icon as any} size={22} color={theme.text} />
         </View>
         <View style={styles.textContainer}>
           <Text style={[styles.settingTitle, { color: theme.text }]}>{title}</Text>
@@ -195,7 +198,7 @@ export const SettingsScreen: React.FC = () => {
       >
         <View style={styles.settingItemLeft}>
           <View style={[styles.iconContainer, { backgroundColor: theme.border }]}>
-            <IconComponent name={icon} size={20} color={theme.text} />
+            <IconComponent name={icon as any} size={22} color={theme.text} />
           </View>
           <View style={styles.textContainer}>
             <Text style={[styles.settingTitle, { color: theme.text }]}>{title}</Text>

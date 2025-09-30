@@ -21,8 +21,10 @@ import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import { useFavorites } from '../context/FavoritesContext';
 import { useTheme } from '../context/ThemeContext';
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icon2 from 'react-native-vector-icons/Feather';
+
+
+import { FontAwesome as Icon, Feather as Icon2 } from '@expo/vector-icons';
+
 
 type ImageViewerScreenRouteProp = RouteProp<RootStackParamList, 'ImageViewer'>;
 
@@ -207,12 +209,12 @@ export const ImageViewer: React.FC = () => {
               activeOpacity={0.7}
             >
               <View style={[styles.actionIcon, isFav && styles.favoriteActive]}>
-                {isFav ? <Icon name="heart" size={24} color={theme.favorite} /> : <Icon name="heart-o" size={24} color={theme.favorite} />}
+                {isFav ? <Icon name="heart" size={26} color={theme.favorite} /> : <Icon name="heart-o" size={26} color={theme.favorite} />}
               </View>
             </TouchableOpacity>
             
             <TouchableOpacity 
-              style={styles.actionButton} 
+              style={styles.actionButton}
               onPress={shareImage}
               activeOpacity={0.7}
             >

@@ -46,7 +46,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
     // initialize on mount too
     if (systemColorScheme === "dark" || systemColorScheme === "light") {
       setSystemTheme(systemColorScheme);
-    }
+    };
 
     return () => listener.remove();
   }, [systemColorScheme]);
@@ -66,9 +66,8 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
         setThemeModeState("dark");
       } finally {
         setIsInitialized(true);
-      }
+      };
     };
-
     loadThemePreference();
   }, []);
 
@@ -102,12 +101,7 @@ export const ThemeProvider: React.FC<{ children: ReactNode }> = ({ children }) =
   };
 
   const toggleTheme = () => {
-    const nextMode: ThemeMode =
-      themeMode === "system"
-        ? "light"
-        : themeMode === "light"
-        ? "dark"
-        : "system";
+    const nextMode: ThemeMode = themeMode === "system" ? "light" : themeMode === "light" ? "dark" : "system";
     setThemeMode(nextMode);
   };
 

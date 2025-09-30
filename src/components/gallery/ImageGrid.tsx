@@ -7,7 +7,9 @@ import { ErrorMessage } from '../common/ErrorMessage';
 import { Skeleton } from '../common/Skeleton';
 import { LinearGradient } from 'expo-linear-gradient';
 import { useTheme } from '../../context/ThemeContext';
-import Icon from 'react-native-vector-icons/Feather';
+// import Icon from 'react-native-vector-icons/Feather';
+
+import { Feather as Icon } from '@expo/vector-icons';
 
 
 interface ImageGridProps {
@@ -26,7 +28,7 @@ interface ImageGridProps {
 const { width } = Dimensions.get('window');
 const PADDING = 8;
 const ITEM_SPACING = 12;
-const NUM_COLUMNS = 3;
+const NUM_COLUMNS = 2;
 const COLUMN_WIDTH = (width - PADDING * 2 - ITEM_SPACING * (NUM_COLUMNS - 1)) / NUM_COLUMNS;
 
 export const ImageGrid = memo<ImageGridProps>(({
@@ -192,7 +194,7 @@ export const ImageGrid = memo<ImageGridProps>(({
           onPress={scrollToTop}
           activeOpacity={0.8}
           >
-            <Icon name="arrow-up" size={30} color={theme.text} />
+            <Icon name="arrow-up" size={20} color={theme.text} />
         </TouchableOpacity>
       </Animated.View>
     </View>

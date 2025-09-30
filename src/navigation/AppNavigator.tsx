@@ -9,8 +9,7 @@ import { ImageViewer } from '../screens/ImageViewer';
 import { RootStackParamList, TabParamList } from '../types/navigation';
 import { useTheme } from '../context/ThemeContext';
 
-import Icon from 'react-native-vector-icons/FontAwesome';
-import Icon2 from 'react-native-vector-icons/Entypo';
+import { FontAwesome as Icon, Entypo as Icon2 } from '@expo/vector-icons';
 
 
 const Stack = createStackNavigator<RootStackParamList>();
@@ -53,7 +52,7 @@ const TabNavigator = () => {
           tabBarLabel: '',
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <Icon2 name="grid" size={24} color={color} />
+            <Icon2 name="grid" size={26} color={color} />
           ),
         }}
       />
@@ -65,7 +64,7 @@ const TabNavigator = () => {
           tabBarLabel: '',
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <Icon name="heart" size={20} color={color} />
+            <Icon name="heart" size={22} color={color} />
           ),
         }}
       />
@@ -77,7 +76,7 @@ const TabNavigator = () => {
           tabBarLabel: '',
           tabBarShowLabel: false,
           tabBarIcon: ({ color, size }) => (
-            <Icon name="cog" size={22} color={color} />
+            <Icon name="cog" size={24} color={color} />
           ),
         }}
       />
